@@ -158,9 +158,10 @@ public class MyMain {
         }
         else{
             int x = list.size()-1;
+            int y = list.get(list.size()-1);
             list.remove(x);
             insertionSort(list);
-            insert(list, x);
+            insert(list, y);
             }
         return list;
         }
