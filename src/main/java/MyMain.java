@@ -123,12 +123,13 @@ public class MyMain {
 
     // Tail recursive method
     public static ArrayList<Integer> insertTR(ArrayList<Integer> list, int x, int i) {
-        if (x > list.size()) {
-            list.add(list.size(), x);
+        if (i >= list.size()) {
+            list.add(x);
             return list;
         }
         if (x < list.get(i)) {
             list.add(i, x);
+            return list;
         }
         if (x > list.get(i)) {
             return insertTR(list, x, i + 1);
